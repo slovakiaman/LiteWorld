@@ -47,8 +47,7 @@ public class HlavneMenu extends AbstractObrazovka {
         addActor(buttonExit);
 
         //nastavenie listenerov
-        buttonHrat.addListener(UIPrvky.vytvorListener(Obrazovka.HRA));
-
+        buttonHrat.addListener(UIPrvky.listenerNaPreChodObrazovky(Obrazovka.HRA));
         buttonExit.addListener(new InputListener() {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {

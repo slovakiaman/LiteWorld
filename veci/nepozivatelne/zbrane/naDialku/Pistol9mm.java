@@ -17,13 +17,15 @@ public class Pistol9mm implements INaDialku {
     private final int speed;
     private final int range;
     private int naboje;
+    private int kapacita;
     private boolean pouzivany;
     
     public Pistol9mm() {
         this.damage = 10;
         this.speed = 8;
         this.range = 5;
-        this.naboje = 15;
+        this.kapacita = 15;
+        this.naboje = this.kapacita;
         this.pouzivany = false;
     }
     
@@ -51,5 +53,30 @@ public class Pistol9mm implements INaDialku {
     @Override
     public boolean pouzivany(Hrac hrac) {
         return this.pouzivany;
+    }
+    
+    @Override
+    public int getRychlost() {
+        return this.speed;
+    }
+
+    @Override
+    public int getUtok() {
+        return this.damage;
+    }
+
+    @Override
+    public int getDosah() {
+        return this.range;
+    }
+
+    @Override
+    public int getNaboje() {
+        return this.naboje;
+    }
+
+    @Override
+    public int getMaximumNabojov() {
+        return this.kapacita;
     }
 }

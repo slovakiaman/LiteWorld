@@ -8,6 +8,7 @@ package sk.uniza.fri.liteworld.obrazovky;
 import sk.uniza.fri.liteworld.nezaradene.Obrazovka;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.EventListener;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
@@ -22,8 +23,14 @@ public class UIPrvky {
     public static ImageButton vytvorButton(Texture textura) {
         return new ImageButton(new TextureRegionDrawable(new TextureRegion(textura)));
     }
+    //enum na buttony? :D
+    public static ImageButton vytvorButton(Texture textura, InputListener listener) {
+        ImageButton button = new ImageButton(new TextureRegionDrawable(new TextureRegion(textura)));
+        button.addListener(listener);
+        return button;
+    }
 
-    public static InputListener vytvorListener(final Obrazovka cielovaObrazovka) {
+    public static InputListener listenerNaPreChodObrazovky(final Obrazovka cielovaObrazovka) {
         return new InputListener() {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
@@ -34,4 +41,5 @@ public class UIPrvky {
     }
     
     //tu by bolo fajn vymyslieť ten dialóg a okno k nemu
+
 }

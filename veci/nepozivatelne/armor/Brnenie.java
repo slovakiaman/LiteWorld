@@ -46,5 +46,12 @@ public class Brnenie implements IArmor {
     public boolean pouzivany(Hrac hrac) {
         return this.pouzivany;
     }
+
+    @Override
+    public int getArmor() {
+        return this.armor;
+    }
+    
+    
     
 }

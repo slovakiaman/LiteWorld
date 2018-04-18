@@ -12,5 +12,6 @@ import sk.uniza.fri.liteworld.veci.INepozivatelne;
  * @author Marek
  */
 public interface IZbrane extends INepozivatelne {
-    
+    int getRychlost();
+    int getUtok();
 }

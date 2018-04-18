@@ -17,13 +17,15 @@ public class Luk implements INaDialku {
     private final int speed;
     private final int range;
     private int naboje;
+    private int kapacita;
     private boolean pouzivany;
     
     public Luk() {
         this.damage = 14;
         this.speed = 5;
         this.range = 7;
-        this.naboje = 10;
+        this.kapacita = 10;
+        this.naboje = this.kapacita;
         this.pouzivany = false;
     }
     
@@ -51,5 +53,30 @@ public class Luk implements INaDialku {
     @Override
     public boolean pouzivany(Hrac hrac) {
         return this.pouzivany;
+    }
+    
+    @Override
+    public int getRychlost() {
+        return this.speed;
+    }
+
+    @Override
+    public int getUtok() {
+        return this.damage;
+    }
+
+    @Override
+    public int getDosah() {
+        return this.range;
+    }
+
+    @Override
+    public int getNaboje() {
+        return this.naboje;
+    }
+
+    @Override
+    public int getMaximumNabojov() {
+        return this.kapacita;
     }
 }

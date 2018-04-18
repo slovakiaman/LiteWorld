@@ -132,7 +132,7 @@ public class Hra extends AbstractObrazovka {
         this.renderer.setView(this.camera);
     }
 
-    private void vykresli() {
+    private void vykresli() {   //môžem hodiť do buildStage
         this.renderer.getBatch().begin();
         this.renderer.renderTileLayer(this.zaklady);
         this.renderer.renderTileLayer(this.kolizie);
@@ -145,10 +145,15 @@ public class Hra extends AbstractObrazovka {
         }
         this.renderer.getBatch().end();
     }
+    /** potrebuje ho CombatObrazovka */
+    public Hrac getHrac() {
+        return this.hrac;
+    }
 
     @Override
     public void buildStage() {
     }
+    
 }
 //TODO pozrieť actor a čo to robí
 //TODO pozrieť InputProcessor a ako to funguje

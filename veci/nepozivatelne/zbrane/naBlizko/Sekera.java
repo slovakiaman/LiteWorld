@@ -47,4 +47,14 @@ public class Sekera implements INaBlizko {
     public boolean pouzivany(Hrac hrac) {
         return this.pouzivany;
     }
+    
+    @Override
+    public int getRychlost() {
+        return this.speed;
+    }
+
+    @Override
+    public int getUtok() {
+        return this.damage;
+    }
 }

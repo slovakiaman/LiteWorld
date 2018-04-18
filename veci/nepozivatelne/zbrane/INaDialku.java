@@ -12,5 +12,7 @@ import sk.uniza.fri.liteworld.veci.nepozivatelne.IZbrane;
  * @author Marek
  */
 public interface INaDialku extends IZbrane {
-    
+    int getDosah();
+    int getNaboje();
+    int getMaximumNabojov();
 }

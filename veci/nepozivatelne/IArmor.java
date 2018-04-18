@@ -11,5 +11,5 @@ import sk.uniza.fri.liteworld.veci.INepozivatelne;
  * @author Marek
  */
 public interface IArmor extends INepozivatelne {
-    
+    int getArmor();
 }

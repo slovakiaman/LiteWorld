@@ -16,14 +16,16 @@ public class AWP implements INaDialku {
     private final int range;
     private final int speed;
     private final int damage;
-    private final int naboje;
+    private int naboje;
+    private int kapacita;
     private boolean pouzivany;
     
     public AWP() {
         this.range = 10;
         this.speed = 1;
         this.damage = 20;
-        this.naboje = 5;
+        this.kapacita = 5;
+        this.naboje = this.kapacita;
         this.pouzivany = false;
     }
     
@@ -52,5 +54,29 @@ public class AWP implements INaDialku {
         return this.pouzivany;
     }
     
+    @Override
+    public int getRychlost() {
+        return this.speed;
+    }
+
+    @Override
+    public int getUtok() {
+        return this.damage;
+    }
+
+    @Override
+    public int getDosah() {
+        return this.range;
+    }
+
+    @Override
+    public int getNaboje() {
+        return this.naboje;
+    }
+
+    @Override
+    public int getMaximumNabojov() {
+        return this.kapacita;
+    }
     
 }

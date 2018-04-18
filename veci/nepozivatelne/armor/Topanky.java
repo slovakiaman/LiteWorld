@@ -46,4 +46,9 @@ public class Topanky implements IArmor {
         return this.pouzivany;
     }
     
+    @Override
+    public int getArmor() {
+        return this.armor;
+    }
+    
 }

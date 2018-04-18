@@ -50,4 +50,13 @@ public class Nozik implements INaBlizko {
         return this.pouzivany;
     }
     
+    @Override
+    public int getRychlost() {
+        return this.speed;
+    }
+
+    @Override
+    public int getUtok() {
+        return this.damage;
+    }
 }

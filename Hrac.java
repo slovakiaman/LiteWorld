@@ -20,6 +20,7 @@ import sk.uniza.fri.liteworld.veci.nepozivatelne.armor.Helma;
 import sk.uniza.fri.liteworld.veci.nepozivatelne.armor.Nohavice;
 import sk.uniza.fri.liteworld.veci.nepozivatelne.armor.Topanky;
 import sk.uniza.fri.liteworld.nezaradene.Staty;
+import sk.uniza.fri.liteworld.npc.Nepriatel;
 import sk.uniza.fri.liteworld.obrazovky.Inventar;
 
 
@@ -267,4 +268,19 @@ public class Hrac extends Sprite {
         this.inventar.pridaj(vec);
     }
 
+    public int getHp() {
+        return this.hp;
+    }
+
+    public int getRychlost() {
+        return (int)(this.zbran.getRychlost() + Staty.DEX.getHodnota() * 0.5);
+    }
+    
+    public int getUtok() {
+        return this.zbran.getUtok();
+    }
+    
+    public void utoc(Nepriatel nepriatel) {
+        nepriatel.dostanDamage(this.getUtok());
+    }
 }
